@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import Classbutton from './components/Classbutton'
+import Phaserow from './components/Phaserow'
+import { useState } from 'react'
+
 
 function App() {
+  const [phaseClicked, updatePhaseClicked] = useState(false)
+  const togglePhaseClicked = () => updatePhaseClicked(!phaseClicked)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <header><h1>TBC BIS</h1></header>
+      <p>CHOOSE YOUR PHASE</p>
+      <Phaserow />
+      <p>CHOOSE YOUR CLASS</p>
+      <div className="class-row">
+        <Classbutton />
+        <Classbutton />
+        <Classbutton />
+        <Classbutton />
+        <Classbutton />
+        <Classbutton />
+        <Classbutton />
+        <Classbutton />
+        <Classbutton />
+      </div>
     </div>
   );
 }
