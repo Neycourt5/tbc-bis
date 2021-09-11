@@ -53,7 +53,9 @@ body{
 }
 
 
- .phase-button {
+
+
+.phase-row.radios .phase-radio{
   display:flex;
   justify-content: center;
   align-items: center;
@@ -71,7 +73,12 @@ body{
   -o-user-select: none;
   cursor:pointer;
 }
-.phase-button .checked{
+
+.radios input[type=radio]{
+  display:none
+}
+
+.radios input[type=radio]:checked + .phase-radio{
   background-color: yellow;
   color: black;
   display:flex;
@@ -84,9 +91,39 @@ body{
   border: 1px solid yellow;
 }
 
-.phase-radio-container input[type=radio]:checked + .phase-radio{
-  background-color: red;
-} 
+
+ /* .phase-button {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-weight: bolder;
+  background-color:black;
+  color: yellow;
+  border: 1px solid yellow;
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  cursor:pointer;
+}
+
+.phase-row .radios input[type=radio]:checked + .radio{
+  background-color: yellow;
+  color: black;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-weight: bolder;
+  border: 1px solid yellow;
+} */
+
 
 
 

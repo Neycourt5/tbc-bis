@@ -1,59 +1,42 @@
 import React from 'react'
-import Phasebutton from './Phasebutton'
-import { useState } from 'react'
 
 
 const Phaserow = ({ updatePhase }) => {
 
-    // const phases = ['Phase 1', 'Phase 2', 'Phase 3', 'Phase 4', 'Phase 5']
-    // const phaseButtons = []
-    // const [style, updateStyle] = useState('phase-button')
-
-    // phases.forEach((item, index) => {
-    //     phaseButtons.push(<div
-    //         key={index}
-    //         id={index + 1}
-    //         className={style}
-    //         onClick={(e) => {
-    //             updatePhase(() => index + 1)
-    //             addClickStyle(e)
-    //         }}
-    //     >
-    //         {item}
-    //     </div >)
-    // })
-
-    // const addClickStyle = (button, index) => {
-    //     button.target.classList.add('clicked')
-    // }
-
     return (
-        <div className="phase-row">
-            <Phasebutton
-                text='1'
-                id={1}
-                updatePhase={updatePhase}
-            />
-            <Phasebutton
-                text='2'
-                id={2}
-                updatePhase={updatePhase}
-            />
-            <Phasebutton
-                text='3'
-                id={3}
-                updatePhase={updatePhase}
-            />
-            <Phasebutton
-                text='4'
-                id={4}
-                updatePhase={updatePhase}
-            />
-            <Phasebutton
-                text='5'
-                id={5}
-                updatePhase={updatePhase}
-            />
+        // Radio button group to select the phase
+        <div class="phase-row radios">
+            <input type="radio" name="rGroup" value="1" id="r1" />
+            <label
+                class="phase-radio"
+                htmlFor="r1"
+                // updatePhase will update the phase with the value in parentheses
+                onClick={() => updatePhase(1)}
+            >Phase 1</label>
+            <input type="radio" name="rGroup" value="2" id="r2" />
+            <label
+                class="phase-radio"
+                htmlFor="r2"
+                onClick={() => updatePhase(2)}
+            >Phase 2</label>
+            <input type="radio" name="rGroup" value="3" id="r3" />
+            <label
+                class="phase-radio"
+                htmlFor="r3"
+                onClick={() => updatePhase(3)}
+            >Phase 3</label>
+            <input type="radio" name="rGroup" value="4" id="r4" />
+            <label
+                class="phase-radio"
+                htmlFor="r4"
+                onClick={() => updatePhase(4)}
+            >Phase 4</label>
+            <input type="radio" name="rGroup" value="5" id="r5" />
+            <label
+                class="phase-radio"
+                htmlFor="r5"
+                onClick={() => updatePhase(5)}
+            >Phase 5</label>
         </div>
     )
 }

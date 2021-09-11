@@ -1,4 +1,4 @@
-import Classbutton from './components/Classbutton'
+import Classrow from './components/Classrow'
 import Phaserow from './components/Phaserow'
 import { useState } from 'react'
 
@@ -6,13 +6,13 @@ import { useState } from 'react'
 function App() {
 
   // Store selected phase information in a useState
-  const [phase, updatePhase] = useState()
+  const [phase, updatePhase] = useState(() => 0)
   console.log(`Selected phase: ${phase}`)
 
 
   // Store selected class information in a useState
-  // const [wowClass, updatewowClass] = useState()
-  // console.log(`Selected class: ${wowClass}`)
+  const [wowClass, updatewowClass] = useState()
+  console.log(`Selected class: ${wowClass}`)
 
 
   return (
@@ -28,17 +28,7 @@ function App() {
 
       {/* Row of buttons to select class */}
       <p>CHOOSE YOUR CLASS</p>
-      <div className="class-row">
-        <Classbutton />
-        <Classbutton />
-        <Classbutton />
-        <Classbutton />
-        <Classbutton />
-        <Classbutton />
-        <Classbutton />
-        <Classbutton />
-        <Classbutton />
-      </div>
+      <Classrow />
     </div>
   );
 }
