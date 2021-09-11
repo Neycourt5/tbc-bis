@@ -56,6 +56,11 @@ body{
   background-color:black;
   color: yellow;
   border: 1px solid yellow;
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
 }
 .phase-button.clicked{
   background-color: yellow;

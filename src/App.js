@@ -4,14 +4,17 @@ import { useState } from 'react'
 
 
 function App() {
-  const [phaseClicked, updatePhaseClicked] = useState(false)
-  const togglePhaseClicked = () => updatePhaseClicked(!phaseClicked)
+  const [phase, updatePhase] = useState(0)
+  console.log(`Selected phase: ${phase}`)
 
   return (
     <div className="container">
       <header><h1>TBC BIS</h1></header>
       <p>CHOOSE YOUR PHASE</p>
-      <Phaserow />
+      <Phaserow
+        phase={phase}
+        updatePhase={updatePhase}
+      />
       <p>CHOOSE YOUR CLASS</p>
       <div className="class-row">
         <Classbutton />

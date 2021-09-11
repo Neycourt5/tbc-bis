@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Phasebutton = ({ text, togglePhaseClicked, phaseClicked }) => {
+const Phasebutton = ({ text, id, updatePhase }) => {
     return (
-        <div className={phaseClicked ? "phase-button clicked" : 'phase-button'}
-            onClick={togglePhaseClicked}
+        <div className='phase-button'
+            onClick={() => updatePhase(() => id)}
         >
             {text}
         </div>
