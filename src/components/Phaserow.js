@@ -31,12 +31,6 @@ const Phaserow = ({ updatePhase }) => {
                 htmlFor="r4"
                 onClick={() => updatePhase(4)}
             >Phase 4</label>
-            <input type="radio" name="rGroup" value="5" id="r5" />
-            <label
-                class="phase-radio"
-                htmlFor="r5"
-                onClick={() => updatePhase(5)}
-            >Phase 5</label>
         </div>
     )
 }
